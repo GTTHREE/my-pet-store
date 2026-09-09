@@ -113,7 +113,7 @@
             <a href="#">Shop</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
-        </nav>
+            <a href="#">🛒 Cart (<span id="cart-count">0</span>)</a>
 
     </header>
 
@@ -139,7 +139,7 @@
                 <img class="product-photo" src="dog-bowl.jpg" alt="Premium Dog Bowl">
                 <h3>Premium Dog Bowl</h3>
                 <p>$29.99</p>
-                <button>Add to Cart</button>
+                <button onclick="addToCart()">Add to Cart</button>
             </div>
 
             <div class="product">
@@ -159,7 +159,15 @@
         </div>
 
     </section>
+    <script>
+    let cartCount = 0;
 
+    function addToCart() {
+        cartCount = cartCount + 1;
+
+        document.getElementById("cart-count").textContent = cartCount;
+    }
+    </script>
 </body>
 
 </html>
