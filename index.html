@@ -139,21 +139,27 @@
                 <img class="product-photo" src="dog-bowl.jpg" alt="Premium Dog Bowl">
                 <h3>Premium Dog Bowl</h3>
                 <p>$29.99</p>
-                <button onclick="addToCart()">Add to Cart</button>
+                <button onclick="addToCart('Premium Dog Bowl', 29.99)">
+                    Add to Cart
+                </button>
             </div>
 
             <div class="product">
                 <div class="product-image">🐱</div>
                 <h3>Cozy Cat Bed</h3>
                 <p>$49.99</p>
-                <button onclick="addToCart()">Add to Cart</button>
+                <button onclick="addToCart('Cozy Cat Bed', 49.99)">
+                    Add to Cart
+                </button>
             </div>
 
             <div class="product">
                 <div class="product-image">🐕</div>
                 <h3>Pet Travel Bag</h3>
                 <p>$39.99</p>
-                <button onclick="addToCart()">Add to Cart</button>
+                <button onclick="addToCart('Pet Travel Bag', 39.99)">
+                    Add to Cart
+                </button>
             </div>
 
         </div>
@@ -162,10 +168,13 @@
     <script>
     let cartCount = 0;
 
-    function addToCart() {
-        cartCount = cartCount + 1;
+    function addToCart(productName, price) {
+    cartCount = cartCount + 1;
 
-        document.getElementById("cart-count").textContent = cartCount;
+    document.getElementById("cart-count").textContent = cartCount;
+
+    console.log(productName);
+    console.log(price);
     }
     </script>
 </body>
