@@ -129,3 +129,43 @@
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    padding: 30px;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.cart-drawer.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header button {
+    margin: 0;
+    padding: 5px 12px;
+    font-size: 24px;
+    background: none;
+    color: #333;
+}
+
+#cart-items {
+    margin-top: 30px;
+}
+
+.cart-footer {
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
