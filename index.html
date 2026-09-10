@@ -113,7 +113,7 @@
             <a href="#">Shop</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
-            <a href="#">🛒 Cart (<span id="cart-count">0</span>)</a>
+            <a href="#" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
         </nav>
     </header>
 
@@ -181,6 +181,19 @@
 
     console.log(productName);
     console.log(price);
+    }
+    function showCart() {
+    let message = "Your Cart:\n\n";
+    let total = 0;
+
+    for (let item of cart) {
+        message = message + item.name + " - $" + item.price + "\n";
+        total = total + item.price;
+    }
+
+    message = message + "\nTotal: $" + total.toFixed(2);
+
+    alert(message);
     }
     </script>
 </body>
