@@ -167,9 +167,15 @@
     </section>
     <script>
     let cartCount = 0;
+    let cart = [];
 
     function addToCart(productName, price) {
     cartCount = cartCount + 1;
+
+    cart.push({
+    name: productName,
+    price: price
+    });
 
     document.getElementById("cart-count").textContent = cartCount;
 
