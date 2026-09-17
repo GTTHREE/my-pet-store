@@ -1,95 +1,56 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>PAWORA</title>
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover PAWORA: everyday essentials for happier pets, from mealtime to nap time and adventures together.">
+  <title>PAWORA — Little things. Happier pets.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
-<body>
-
-    <header>
-
-        <div class="logo">
-            🐾 PAWORA
-        </div>
-
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Shop</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
-        </nav>
-    </header>
-
-
-    <section class="hero">
-
-        <h1>Better Products for Happier Pets</h1>
-
-        <p>Premium products designed for pets and their owners.</p>
-
-        <button>Shop Now</button>
-
+<body id="home">
+  <a class="skip-link" href="#shop">Skip to products</a>
+  <div class="announcement">For the little moments. For the love of pets.</div>
+  <header class="site-header wrap">
+    <a class="logo" href="#home" aria-label="PAWORA home"><span aria-hidden="true">✳</span> PAWORA<span class="logo-dot">®</span></a>
+    <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">Our story</a></nav>
+    <button class="cart-trigger" id="open-cart" aria-haspopup="dialog">Bag <span id="cart-count">0</span></button>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">EVERYDAY ESSENTIALS, EXTRA LOVE</p>
+        <h1 id="hero-title">Little things.<br>Happier <em>pets.</em></h1>
+        <p class="hero-description">For the messy meals, the cozy naps, and every adventure in between. Make their everyday a little better.</p>
+        <a class="button" href="#shop">Shop the essentials <span aria-hidden="true">↗</span></a>
+        <div class="hero-note"><span aria-hidden="true">♡</span> Good days start with a little care.</div>
+      </div>
+      <div class="hero-visual">
+        <img src="dog-bowl.jpg" alt="Cream pet bowl, ready for an everyday mealtime" width="1707" height="1280" fetchpriority="high">
+        <div class="round-note" aria-hidden="true">SMALL JOYS<br><span>✳</span><br>BIG LOVE</div>
+        <a class="photo-caption" href="#shop"><div><span>THE MEALTIME EDIT</span><strong>A bowl full of happy.</strong></div><span aria-hidden="true">↗</span></a>
+      </div>
     </section>
-
-
-    <section class="products">
-
-        <h2>Featured Products</h2>
-
-        <div class="product-container">
-
-            <div class="product">
-                <img class="product-photo" src="dog-bowl.jpg" alt="Premium Dog Bowl">
-                <h3>Premium Dog Bowl</h3>
-                <p>$29.99</p>
-                <button onclick="addToCart('Premium Dog Bowl', 29.99)">
-                    Add to Cart
-                </button>
-            </div>
-
-            <div class="product">
-                <div class="product-image">🐱</div>
-                <h3>Cozy Cat Bed</h3>
-                <p>$49.99</p>
-                <button onclick="addToCart('Cozy Cat Bed', 49.99)">
-                    Add to Cart
-                </button>
-            </div>
-
-            <div class="product">
-                <div class="product-image">🐕</div>
-                <h3>Pet Travel Bag</h3>
-                <p>$39.99</p>
-                <button onclick="addToCart('Pet Travel Bag', 39.99)">
-                    Add to Cart
-                </button>
-            </div>
-
-        </div>
-
+    <div class="moments wrap"><span>01 <strong>Better mealtimes</strong></span><span>02 <strong>Cozy little corners</strong></span><span>03 <strong>More time together</strong></span></div>
+    <section class="products wrap" id="shop" aria-labelledby="products-title">
+      <div class="section-heading"><div><p class="eyebrow">THE EVERYDAY COLLECTION</p><h2 id="products-title">Their new favorites.</h2></div><p>Three little ways to show you care.</p></div>
+      <div class="product-grid">
+        <article class="product"><div class="product-visual bowl"><span class="tag">MEALTIME</span><img src="dog-bowl.jpg" alt="Cream Premium Dog Bowl" width="1707" height="1280" loading="lazy"></div><div class="product-title"><h3>Premium Dog Bowl</h3><span>$29.99</span></div><p>A happy place for every meal.</p><button class="add-button" data-product="bowl">Add to bag <span aria-hidden="true">+</span></button></article>
+        <article class="product"><div class="product-visual bed"><span class="tag">NAP TIME</span><img src="cat-bed.svg" alt="Illustration of a cozy cat bed; product photo coming soon" width="440" height="340" loading="lazy"><span class="illustration-label">Product illustration</span></div><div class="product-title"><h3>Cozy Cat Bed</h3><span>$49.99</span></div><p>For their favorite kind of doing nothing.</p><button class="add-button" data-product="bed">Add to bag <span aria-hidden="true">+</span></button></article>
+        <article class="product"><div class="product-visual bag"><span class="tag">ON THE GO</span><img src="travel-bag.svg" alt="Illustration of a pet travel bag; product photo coming soon" width="440" height="340" loading="lazy"><span class="illustration-label">Product illustration</span></div><div class="product-title"><h3>Pet Travel Bag</h3><span>$39.99</span></div><p>Because the best company has paws.</p><button class="add-button" data-product="bag">Add to bag <span aria-hidden="true">+</span></button></article>
+      </div>
     </section>
-    <div id="cart-drawer" class="cart-drawer">
-
-    <div class="cart-header">
-        <h2>Your Cart</h2>
-        <button onclick="closeCart()">×</button>
+    <section class="story wrap" id="about"><div class="story-symbol" aria-hidden="true">✳</div><div><p class="eyebrow">A LITTLE ABOUT PAWORA</p><h2>They make life better.<br>Let’s return the favor.</h2></div><p>We believe care lives in the everyday. A favorite bowl. A quiet corner. A trip together. PAWORA is about making room for more of those simple, happy moments.</p></section>
+  </main>
+  <footer class="wrap"><a class="logo" href="#home">✳ PAWORA</a><p>Everyday care. Extraordinary love.</p><span>© PAWORA · Demo store</span></footer>
+  <!-- 原生 dialog 自动管理焦点和 Esc，购物车保持纯前端。 -->
+  <dialog id="cart-drawer" aria-labelledby="cart-title">
+    <div class="drawer-content"><div class="cart-header"><div><p class="eyebrow">YOUR LITTLE FINDS</p><h2 id="cart-title">Shopping bag</h2></div><button id="close-cart" class="icon-button" aria-label="Close shopping bag" autofocus>×</button></div>
+      <div id="cart-items"></div>
+      <div class="cart-footer"><div class="total-line"><strong>Subtotal</strong><strong id="cart-total">$0.00</strong></div><p>Prices in USD. Demo only — no orders or payments.</p><button class="button" id="checkout" disabled>Checkout — coming soon <span aria-hidden="true">↗</span></button><p id="checkout-note" role="status"></p><button class="continue-button" id="continue-shopping">Continue shopping</button></div>
     </div>
-
-    <div id="cart-items">
-        <p>Your cart is empty.</p>
-    </div>
-
-    <div class="cart-footer">
-        <h3>Total: $<span id="cart-total">0.00</span></h3>
-        <button>Checkout</button>
-    </div>
-
-</div>
-    <script src="script.js"></script>
+  </dialog>
+  <div class="toast" id="status" role="status" aria-live="polite"></div>
+  <noscript><p class="wrap">Please enable JavaScript to use the shopping bag. This is a demo store; checkout is unavailable.</p></noscript>
 </body>
-
 </html>
